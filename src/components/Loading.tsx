@@ -46,7 +46,7 @@ const Loading = ({ percent }: { percent: number }) => {
     <>
       <div className="loading-header">
         <a href="/#" className="loader-title" data-cursor="disable">
-          Santatra <img src="https://res.cloudinary.com/de03l56z6/image/upload/v1777029249/MDA_ragnpg.png" alt="logo" style={{ width: "20px" }} />ichado
+          Santatra Michado
         </a>
         <div className={`loaderGame ${clicked && "loader-out"}`}>
           <div className="loaderGame-container">
