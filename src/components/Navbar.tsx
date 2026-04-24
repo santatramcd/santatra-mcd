@@ -43,8 +43,8 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Santatra Michado
-          <img src="https://res.cloudinary.com/de03l56z6/image/upload/v1777029249/MDA_ragnpg.png" alt="logo" />
+          Santatra 
+          <img src="https://res.cloudinary.com/de03l56z6/image/upload/v1777029249/MDA_ragnpg.png" alt="logo" style={{ width: "20px" }} />ichado
         </a>
         <a
           href="mailto:andrianjakasantatra22@gmail.com"
