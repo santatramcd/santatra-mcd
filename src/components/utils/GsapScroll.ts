@@ -1,5 +1,10 @@
 import * as THREE from "three";
-import gsap from "gsap";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
+import SplitText from "gsap/SplitText";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText);
 
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
