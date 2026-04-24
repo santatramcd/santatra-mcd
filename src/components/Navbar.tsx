@@ -47,11 +47,13 @@ const Navbar = () => {
           <img src="https://res.cloudinary.com/de03l56z6/image/upload/v1777029249/MDA_ragnpg.png" alt="logo" style={{ width: "20px" }} />ichado
         </a>
         <a
-          href="mailto:andrianjakasantatra22@gmail.com"
+          href="mailto:
+Contact@santatra-michado.site"
           className="navbar-connect"
           data-cursor="disable"
         >
-          andrianjakasantatra22@gmail.com
+          
+Contact@santatra-michado.site
         </a>
         <ul>
           <li>
