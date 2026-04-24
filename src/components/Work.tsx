@@ -51,7 +51,7 @@ const Work = () => {
       <div className="work-container section-container">
         <h2>
           Mes <span>
-portfolio</span>
+portfolios</span>
         </h2>
         <div className="work-flex">
           {/* <div className="work-box">
