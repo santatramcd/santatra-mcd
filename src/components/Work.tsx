@@ -50,7 +50,8 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          Mes <span>Travaux</span>
+          Mes <span>
+portfolio</span>
         </h2>
         <div className="work-flex">
           {/* <div className="work-box">

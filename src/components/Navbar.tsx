@@ -63,7 +63,7 @@ Contact@santatra-michado.site
           </li>
           <li>
             <a data-href="#work" href="#work">
-              <HoverLinks text="TRAVAUX" />
+              <HoverLinks text="PORTFOLIO" />
             </a>
           </li>
           <li>
