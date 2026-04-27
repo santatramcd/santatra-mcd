@@ -54,24 +54,10 @@ const Work = () => {
 portfolios</span>
         </h2>
         <div className="work-flex">
-          {/* <div className="work-box">
-            <div className="work-info">
-              <div className="work-title">
-                <h3>01</h3>
-                <div>
-                  <h4>Artiist</h4>
-                  <p>Portfolio Créatif</p>
-                </div>
-              </div>
-              <h4>Outils et Fonctionnalités</h4>
-              <p>WordPress, Elementor, HTML, CSS, JavaScript</p>
-            </div>
-            <WorkImage image="https://res.cloudinary.com/de03l56z6/image/upload/v1776951878/artiist_1_ik88vl_w7nmzj.jpg" alt="Artiist" />
-          </div> */}
           <div className="work-box">
             <div className="work-info">
               <div className="work-title">
-                <h3>02</h3>
+                <h3>01</h3>
                 <div>
                   <h4>Robin Ruth</h4>
                   <p>Site Web Professionnel</p>
@@ -85,7 +71,7 @@ portfolios</span>
           <div className="work-box">
             <div className="work-info">
               <div className="work-title">
-                <h3>03</h3>
+                <h3>02</h3>
                 <div>
                   <h4>Mada Digital</h4>
                   <p>Agence Digitale</p>
@@ -99,7 +85,7 @@ portfolios</span>
           <div className="work-box">
             <div className="work-info">
               <div className="work-title">
-                <h3>04</h3>
+                <h3>03</h3>
                 <div>
                   <h4>Createak</h4>
                   <p>Création Web</p>
