@@ -121,3 +121,68 @@ body {
     font-size: 40px;
   }
 }
+/* formulaire */
+.container-form {
+  max-width: 600px;
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 15px;
+
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  background-color: #0b080c;
+}
+
+/* Dans .form-row, les inputs n'ont pas besoin de leur propre margin-bottom
+   puisque le gap du grid gère déjà l'espacement */
+.form-row input {
+  margin-top: 0px;
+}
+
+textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #c2a4ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c2a4ff;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Responsive : repasse en 1 colonne sur petit écran */
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

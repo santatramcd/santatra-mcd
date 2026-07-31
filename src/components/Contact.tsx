@@ -1,5 +1,6 @@
 import { MdArrowOutward, MdCopyright } from "react-icons/md";
 import "./styles/Contact.css";
+import Formulaire from "./formulaire";
 
 const Contact = () => {
   return (
@@ -8,20 +9,7 @@ const Contact = () => {
         <h3>Contact</h3>
         <div className="contact-flex">
           <div className="contact-box">
-            <h4>Email</h4>
-            <p>
-              <a href="mailto:
-Contact@santatra-michado.site" data-cursor="disable">
-                
-Contact@santatra-michado.site
-              </a>
-            </p>
-            <h4>Phone</h4>
-            <p>
-              <a href="tel:+261324665849" data-cursor="disable">
-                +261 32 46 65 849
-              </a>
-            </p>
+            <Formulaire />
           </div>
           <div className="contact-box">
             <h4>Social</h4>
@@ -59,12 +47,20 @@ Contact@santatra-michado.site
             </a>
           </div>
           <div className="contact-box">
-            <h2>
-              Conçu et Développé <br /> par <span>Santatra Michado</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2026
-            </h5>
+            <h4>Email</h4>
+            <p>
+              <a href="mailto:
+Contact@santatra-michado.site" data-cursor="disable">
+
+                Contact@santatra-michado.site
+              </a>
+            </p>
+            <h4>Phone</h4>
+            <p>
+              <a href="tel:+261324665849" data-cursor="disable">
+                +261 32 46 65 849
+              </a>
+            </p>
           </div>
         </div>
       </div>
