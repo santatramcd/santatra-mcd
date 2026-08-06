@@ -203,6 +203,7 @@ export default function ChatIA() {
           gap: 10px;
           border-bottom: 1px solid #21293a;
         }
+        #sm-chat-avatar img,
         #sm-chat-avatar {
           width: 34px; height: 34px; border-radius: 50%;
           background: linear-gradient(135deg, var(--sm-accent), #7b5bff);
@@ -210,6 +211,10 @@ export default function ChatIA() {
           font-weight: 700; color: white; font-size: 14px;
           flex-shrink: 0;
         }
+          #sm-chat-avatar img{
+            object-fit: cover;
+            object-position: center;
+          }
         #sm-chat-header-text { line-height: 1.25; }
         #sm-chat-header-title { color: var(--sm-text); font-weight: 600; font-size: 14px; }
         #sm-chat-header-sub { color: var(--sm-text-dim); font-size: 12px; display: flex; align-items: center; gap: 5px; }
@@ -321,7 +326,6 @@ export default function ChatIA() {
         #sm-chat-send:hover { background: #6f9bff; }
         #sm-chat-send:disabled { background: #2a3446; cursor: not-allowed; }
         #sm-chat-send svg { width: 16px; height: 16px; }
-
         @media (max-width: 420px) {
           #sm-chat-window { right: 12px; bottom: 88px; width: calc(100vw - 24px); }
           #sm-chat-launcher { right: 16px; bottom: 16px; }
@@ -349,7 +353,7 @@ export default function ChatIA() {
       {/* Fenêtre de chat */}
       <div id="sm-chat-window" className={isOpen ? "sm-open" : ""}>
         <div id="sm-chat-header">
-          <div id="sm-chat-avatar">SM</div>
+          <div id="sm-chat-avatar"><img src="https://res.cloudinary.com/de03l56z6/image/upload/v1740470623/michado.jpg" alt="profil"/></div>
           <div id="sm-chat-header-text">
             <div id="sm-chat-header-title">Assistant Santatra</div>
             <div id="sm-chat-header-sub">En ligne</div>
