@@ -1,15 +1,18 @@
 import { MdArrowOutward } from "react-icons/md";
 import "./styles/Contact.css";
-import Formulaire from "./formulaire";
 
 const Contact = () => {
   return (
     <div className="contact-section section-container" id="contact">
       <div className="contact-container">
-        <h3>Contact</h3>
+        <h3>CONTACT</h3>
         <div className="contact-flex">
           <div className="contact-box">
-            <Formulaire />
+            <p>
+              <a href="https://web.santatra-michado.site" data-cursor="disable">
+                👉 Découvrir mes services
+              </a>
+            </p>
           </div>
           <div className="contact-box">
             <h4>Social</h4>
