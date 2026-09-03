@@ -8,10 +8,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-// ⚠️ Remplacez cette URL par celle de votre webhook n8n (URL de PRODUCTION, pas de test)
-const WEBHOOK_URL =
-  "https://n8n-jp2v.onrender.com/webhook/b4816952-f928-4b03-98ab-26eb6da37055/chat";
-
 const WELCOME_MESSAGE =
   "Bonjour 👋 Je suis l'assistant du site de Santatra Michado. Posez-moi une question sur ses services, son portfolio ou comment le contacter !";
 
@@ -25,14 +21,41 @@ function createId(): string {
   return Math.random().toString(36).slice(2, 10) + Date.now().toString(36);
 }
 
-function getOrCreateSessionId(): string {
-  if (typeof window === "undefined") return "";
-  let sessionId = localStorage.getItem("sm_chat_session");
-  if (!sessionId) {
-    sessionId = "sm-" + Date.now() + "-" + Math.random().toString(36).slice(2, 9);
-    localStorage.setItem("sm_chat_session", sessionId);
+function getLocalReply(question: string): string {
+  const normalizedQuestion = question
+    .toLocaleLowerCase("fr-FR")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  if (/bonjour|salut|hello|bonsoir/.test(normalizedQuestion)) {
+    return "Bonjour ! Que souhaitez-vous savoir sur les services, les projets ou le parcours de Santatra ?";
   }
-  return sessionId;
+
+  if (/qui es|a propos|profil|experience|parcours/.test(normalizedQuestion)) {
+    return "Santatra Michado est développeur web avec plus de 3 ans d'expérience. Il crée des sites modernes, performants et responsifs pour les entreprises et les projets digitaux.";
+  }
+
+  if (/service|prestation|propose|besoin|site web/.test(normalizedQuestion)) {
+    return "Santatra conçoit et améliore des sites web avec WordPress, Elementor, JavaScript, PHP, React et Vue.js. Il peut vous accompagner sur un site vitrine, une refonte ou un projet sur mesure.";
+  }
+
+  if (/portfolio|projet|realisation|travail|reference/.test(normalizedQuestion)) {
+    return "Voici quelques projets : Robin Ruth (site professionnel), Mada Digital (agence digitale) et Createak (création web). Les technologies utilisées incluent WordPress, React, Next.js, TypeScript, HTML, CSS et JavaScript.";
+  }
+
+  if (/technologie|techno|outil|competence|react|wordpress|javascript|php|vue/.test(normalizedQuestion)) {
+    return "Ses principales compétences sont WordPress, Elementor, HTML, CSS, JavaScript, PHP, React, Vue.js, Next.js et TypeScript.";
+  }
+
+  if (/contact|email|mail|telephone|tel|joindre|disponib/.test(normalizedQuestion)) {
+    return "Vous pouvez contacter Santatra par email à Contact@santatra-michado.site ou par téléphone au +261 32 46 65 849. Vous pouvez aussi utiliser la section Contact du site.";
+  }
+
+  if (/merci|thanks/.test(normalizedQuestion)) {
+    return "Avec plaisir ! Je reste disponible pour toute question sur le portfolio ou les services.";
+  }
+
+  return "Je peux vous renseigner sur le profil de Santatra, ses services, ses compétences, ses projets ou ses coordonnées. Que souhaitez-vous découvrir ?";
 }
 
 export default function ChatIA() {
@@ -40,15 +63,9 @@ export default function ChatIA() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);
-  const [sessionId, setSessionId] = useState("");
 
   const messagesRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
-
-  // Session id côté client uniquement (évite les erreurs SSR / Next.js)
-  useEffect(() => {
-    setSessionId(getOrCreateSessionId());
-  }, []);
 
   // Ouvre le chat -> message de bienvenue affiché une seule fois
   useEffect(() => {
@@ -84,43 +101,13 @@ export default function ChatIA() {
     setInput("");
     setIsSending(true);
 
-    try {
-      const response = await fetch(WEBHOOK_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: text,
-          sessionId,
-          source: "santatra-michado.site",
-        }),
-      });
-
-      if (!response.ok) throw new Error("Erreur réseau : " + response.status);
-
-      const data = await response.json();
-      // Adaptez le nom du champ ci-dessous selon la sortie de votre node n8n
-      // (souvent "output", "reply", "text" ou "message")
-      const reply: string =
-        data.output ||
-        data.reply ||
-        data.text ||
-        data.message ||
-        "Désolé, je n'ai pas pu traiter votre demande.";
-
-      setMessages((prev) => [...prev, { id: createId(), role: "bot", text: reply }]);
-    } catch (err) {
-      console.error("Erreur chatbot:", err);
+    window.setTimeout(() => {
       setMessages((prev) => [
         ...prev,
-        {
-          id: createId(),
-          role: "bot",
-          text: "Oups, une erreur est survenue en contactant le serveur. Réessayez dans un instant.",
-        },
+        { id: createId(), role: "bot", text: getLocalReply(text) },
       ]);
-    } finally {
       setIsSending(false);
-    }
+    }, 450);
   }
 
   function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
