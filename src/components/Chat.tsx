@@ -40,7 +40,7 @@ function getLocalReply(question: string): string {
   }
 
   if (/portfolio|projet|realisation|travail|reference/.test(normalizedQuestion)) {
-    return "Voici quelques projets : Robin Ruth (site professionnel), Mada Digital (agence digitale) et Createak (création web). Les technologies utilisées incluent WordPress, React, Next.js, TypeScript, HTML, CSS et JavaScript.";
+    return "Voici quelques projets : Robin Ruth (site e-commerce), Mada Digital (agence digitale) et Createak (site e-commerce). Les technologies utilisées incluent WordPress, React, Next.js, TypeScript, HTML, CSS et JavaScript.";
   }
 
   if (/technologie|techno|outil|competence|react|wordpress|javascript|php|vue/.test(normalizedQuestion)) {
