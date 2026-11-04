@@ -87,21 +87,22 @@ const WhatIDo = () => {
             <div className="what-corner"></div>
 
             <div className="what-content-in">
-              <h3>DÉVELOPPEUR WEB</h3>
+              <h3>DÉVELOPPEUR FULLSTACK</h3>
               <h4>Chez Bex Digital</h4>
               <p>
-                Développeur web chez Bex Digital avec les technologies suivantes :
-                WordPress, Elementor, HTML, CSS, JavaScript, VPS et Docker.
+                Développeur fullstack chez Bex Digital avec les technologies suivantes :
+                HTML, CSS, JavaScript, React, Vue.js, PHP, Laravel et WordPress.
               </p>
               <h5>Technos</h5>
               <div className="what-content-flex">
-                <div className="what-tags">WordPress</div>
-                <div className="what-tags">Elementor</div>
                 <div className="what-tags">HTML</div>
                 <div className="what-tags">CSS</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">VPS</div>
-                <div className="what-tags">Docker</div>
+                <div className="what-tags">React</div>
+                <div className="what-tags">Vue.js</div>
+                <div className="what-tags">PHP</div>
+                <div className="what-tags">Laravel</div>
+                <div className="what-tags">WordPress</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -128,18 +129,19 @@ const WhatIDo = () => {
               <h3>CHEZ MAKI SERVICE SARLU</h3>
               <h4>Technologies</h4>
               <p>
-                Expérience chez Maki Service SARLU avec les technologies suivantes :
-                WordPress, Elementor, HTML, CSS, JavaScript, Vue.js et React.
+                Expérience chez Maki Service SARLU en tant que développeur fullstack avec les technologies suivantes :
+                HTML, CSS, JavaScript, React, Vue.js, PHP, Laravel et WordPress.
               </p>
               <h5>Technos</h5>
               <div className="what-content-flex">
-                <div className="what-tags">WordPress</div>
-                <div className="what-tags">Elementor</div>
                 <div className="what-tags">HTML</div>
                 <div className="what-tags">CSS</div>
                 <div className="what-tags">JavaScript</div>
-                <div className="what-tags">Vue.js</div>
                 <div className="what-tags">React</div>
+                <div className="what-tags">Vue.js</div>
+                <div className="what-tags">PHP</div>
+                <div className="what-tags">Laravel</div>
+                <div className="what-tags">WordPress</div>
               </div>
               <div className="what-arrow"></div>
             </div>

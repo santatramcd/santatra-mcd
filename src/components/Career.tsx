@@ -16,13 +16,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Développeur Web</h4>
+                <h4>Développeur Fullstack</h4>
                 <h5>Maki Service SARLU</h5>
               </div>
               <h3>2024</h3>
             </div>
             <p>
-              Développement de sites web et applications avec WordPress, Elementor, HTML, CSS, JavaScript, Vue.js et React. Gestion de projets clients et intégration de fonctionnalités personnalisées.
+              Développement de sites web et d'applications avec HTML, CSS, JavaScript, React, Vue.js, PHP, Laravel et WordPress. Gestion de projets clients et intégration de fonctionnalités personnalisées.
             </p>
           </div>
           <div className="career-info-box">
@@ -40,13 +40,13 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Développeur Web</h4>
+                <h4>Développeur Fullstack</h4>
                 <h5>Bex Digital</h5>
               </div>
               <h3>2026</h3>
             </div>
             <p>
-              Développement web avancé avec WordPress, Elementor, HTML, CSS et JavaScript. Gestion d'infrastructure VPS et containerisation avec Docker. Création de sites responsifs et performants.
+              Développement fullstack avancé avec HTML, CSS, JavaScript, React, Vue.js, PHP, Laravel et WordPress. Création de sites et d'applications responsives et performants.
             </p>
           </div>
         </div>
